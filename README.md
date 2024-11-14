@@ -49,7 +49,7 @@ APP_RATE_LIMIT_PER_MIN=
     $ docker compose build
     $ docker compose up -d
     
-    ## Navigate to container terminal (Or via Docker desktop directly)
+    ## Navigate to container terminal (Ignore this step if you prefer using Docker desktop terminal)
     $ docker ps
     $ docker exec -it <docker-cotainer-id> sh
     
@@ -57,20 +57,21 @@ APP_RATE_LIMIT_PER_MIN=
     $ php artisan migrate
     ```
 
-    - **Standard** (Double check `mysql`, `composer` and `php` installations and versions)
+  - **Standard** (Double check `mysql`, `composer` and `php` installations and versions)
     ```bash
     ## Install packages
     $ composer install
     
     ## Check DB setup (DB should be created) / Migrations
-    ## If issues faced check env variables/DB name...
+    ## If you face issues with connectivity check env `DB_*` variables/DB service run status...
     $ php artisan migrate
     
     ## Start local dev server:
     $ php artisan serve --port=8000
     ```
 
-    ** You might want setting up the app on a web server, you can inspire from that [article](https://adeyomoladev.medium.com/how-to-deploy-a-laravel-app-using-apache-and-mysql-4910a07f9a0c)
+    ** You might want setting up the app on a web server, you can inspire from
+    [laravel on apache set-up](https://adeyomoladev.medium.com/how-to-deploy-a-laravel-app-using-apache-and-mysql-4910a07f9a0c)
 
 ## Usage
 Navigate to the [shorten URL page](http://localhost:8000/urls), you should land on this page:
